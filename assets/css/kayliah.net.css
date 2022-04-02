@@ -1,0 +1,289 @@
+html {
+    background-color: #000000;
+    background: url("../img/background/marc-andre-bouffard-sufokia.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.char-nickname {
+    color: white;
+    text-decoration: none;
+}
+/*.view.bg:before {
+    background-image: url("../img/background/planetatium2-208c819.jpg");
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    filter: blur(5px);
+}*/
+.fixedC {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    width: 100%;
+}
+.fixedContent {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+}
+.fixed {
+    margin: auto;
+    border-radius: 30px;
+    max-width: 95%;
+}
+.char-panel {
+    position: relative;
+    width: 650px;
+    padding: 0;
+    border: 3px solid #3a3932;
+}
+.char-banner {
+    background: url("../img/background/EhskEAsWAAUYyvs.jpg");
+    background-size: cover;
+    background-position: left bottom;
+}
+.char-banner {
+    height: 250px;
+    position: relative;
+}
+.char-banner .char-ornament.o-90 {
+    background: url("../img/ornament/90.png") center center no-repeat;
+}
+.char-ornament.o-90 span {
+    line-height: 270px !important;
+}
+.char-banner .char-ornament {
+    display: none;
+    height: 250px;    
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 360px;
+}
+@media (min-width: 768px) {
+    .char-banner .char-ornament {
+        display: block;
+        left: auto;
+        position: absolute;
+        right: 40px;
+        top: 0;
+    }
+}
+.char-banner .char-ornament span {
+    color: #fff;
+}
+.char-banner .char-ornament span {
+    height: 40px;
+    line-height: 36px;
+    width: 160px;
+}
+.char-banner .char-ornament span {
+    display: block;
+    font-weight: bold;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+.char-look {
+    background: url('../img/character/250_325.png') top right;
+    width: 230px;
+    height: 245px;
+}
+.char-banner .char-picture .char-entitylook {
+    margin-top: 5px;
+}
+.char-entitylook {
+    display: inline-block;
+    vertical-align: middle;
+}
+.char-banner .char-picture-show, .char-banner .char-ornament-show {
+    box-shadow: 0 2px 8px #000000;
+}
+@media (min-width: 768px) {
+    .char-banner .char-picture-show, .char-banner .char-ornament-show {
+        display: none;
+    } 
+}
+.char-banner .char-ornament-show {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 15px;
+    width: 40px;
+    z-index: 5;
+    cursor: pointer;
+    top: 70px;
+}
+.char-banner .char-picture-show.on, .char-banner .char-ornament-show.on {
+    background-color: #171c1b;
+}
+.char-banner .char-picture-show.on {
+    width: 45px;
+}
+.char-banner .char-picture-show, .char-banner .char-ornament-show {
+    box-shadow: 0 2px 8px #000000;
+}
+@media (min-width: 768px) {
+    .char-banner .char-picture-show, .char-banner .char-ornament-show {
+        display: none;
+    }
+}
+.char-banner .char-picture-show {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 15px;
+    width: 40px;
+    z-index: 5;
+    cursor: pointer;
+}
+.infochar-panel {
+    height: 40px;
+    overflow: hidden;
+    font-size: 13px;
+    font-size: 1rem;
+    padding-top: 8px;
+    padding-top: 0.8rem;
+    background: #3a3932;
+}
+.infochar-main {
+    left: 10px;
+    top: -2px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.infochar-property {
+    margin-top: 4px;
+}
+.infochar-property .property-server {
+    display: inline-block;
+    margin-left: 1.25em;
+    padding-left: 0.5em;
+    position: relative;
+    border-color: #494942;
+    color: #28170e;
+}
+@media (min-width: 768px) {
+    .infochar-panel .infochar-property {
+        /*border-left: 1px solid;*/
+        display: inline-block;
+        vertical-align: top;
+        min-height: 43px;
+    }
+}
+.infochar-panel .property-server .server span {
+    float: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+.server span {
+    background: none;
+    color: #fff;
+    border: none;
+}
+.infochar-panel .property-success .success span {
+    float: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+.success span {
+    background: none;
+    color: #fff;
+    border: none;
+}
+.infochar-panel .property-title .title span {
+    float: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+.title span {
+    background: none;
+    color: #fff;
+    border: none;
+}
+#dt-success a {
+    color: white;
+    text-decoration: none;
+}
+.infochar-separation {
+    margin-left: 7px;
+    margin-right: 7px;
+    border-left: 1px solid;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 43px;
+    margin-top: -4px;
+}
+#dt-guilde {
+    margin-top: 4px !important;
+}
+#dt-success {
+    margin-top: 4px !important;
+}
+#dt-title {
+    margin-top: 4px !important;
+}
+.infochar-panel .infochar-level {
+    color: #ffffff;
+}
+.infochar-omega {
+    background: url('../img/character/omega.png') center center no-repeat;
+    width: 42px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    line-height: 27px;
+    text-indent: -2px;
+    color: #222;
+    font-size: 13px;
+    font-weight: bold;
+    /*margin: 0 2px;*/
+    padding: 0;
+}
+.infochar-omega > span {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.infochar-success {
+    background: url('../img/icons_success.png') center center no-repeat;
+    width: 42px;
+    height: 27px;
+    display: inline-block;
+    text-align: center;
+    line-height: 27px;
+    text-indent: -2px;
+    color: #222;
+    font-size: 13px;
+    font-weight: bold;
+    /*margin: 0 2px;*/
+    padding: 0;
+}
+.infochar-success > span {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}

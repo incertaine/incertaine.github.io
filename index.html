@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Incertaine sur Dofus Touch</title>
+	<meta name="title" content="Incertaine sur Dofus Touch">
+	<meta name="description" content="Petit site internet pour le personnage sur le jeu Dofus Touch Herdegrize via un système automatisée">
+	<link rel="canonical" href="https://incertaine.github.io" />
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://incertaine.github.io">
+	<meta property="og:title" content="Incertaineh sur Dofus Touch">
+	<meta property="og:description" content="Petit site internet pour le personnage sur le jeu Dofus Touch Herdegrize via un système automatisée">
+	<meta property="og:image" content="/assets/img/banner.png">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://incertaine.github.io">
+	<meta property="twitter:title" content="Incertaine sur Dofus Touch">
+	<meta property="twitter:description" content="Petit site internet pour le personnage sur le jeu Dofus Touch Herdegrize via un système automatisée">
+	<meta property="twitter:image" content="/assets/img/banner.png">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/fav/favicon-16x16.png">
+	<link rel="mask-icon" href="/assets/fav/safari-pinned-tab.svg" color="#fd79a8">
+	<meta name="msapplication-TileColor" content="#2d3436">
+	<meta name="theme-color" content="#2d3436">
+	<link href="assets/css/requirement.css" rel="stylesheet">
+	<link href="assets/css/kayliah.net.css" rel="stylesheet">
+	<script src="assets/jvs/jquery-3.6.0.min.js" type="text/javascript"></script>
+</head>
+<body class="view bg">
+	<script>
+		var DTpp = "https://rss.app/feeds/W68S6Rg1cmChsHGr.xml";
+		var DTgd = "https://rss.app/feeds/lCuVAXlfp5HF9kzx.xml";
+		$(document).ready(function() {	
+			$.ajax(DTpp, {
+				accepts: { xml: "application/rss+xml" },
+				dataType: "xml",
+				success: function(data) {
+					$(data).find("item").each(function () {
+						var el = $(this);
+						let dc = el.find("description").text();
+						const description = dc.split(" ");
+						
+						document.getElementById("dt-charweb").innerHTML = "<a href='"+$(data).find("image").find("link").text()+"' title='Page Perso. (Dofus-Touch.com)' rel='noopener' target='_blank' class='char-nickname'>Incertaine</a>";
+						document.getElementById("dt-level").innerHTML = "<span>Omega</span>"+description[4];
+						document.getElementById("dt-success").innerHTML = "<a href='"+$(data).find("image").find("link").text()+"/succes' title='Page Succès (Dofus-Touch.com)' rel='noopener' target='_blank'>"+el.find("title").text()+" pts succès";
+					    document.getElementById("dt-title").innerHTML = dc.slice(-60, -22);
+
+					});
+				}	
+			});
+
+			$.ajax(DTgd, {
+				accepts: { xml: "application/rss+xml" },
+				dataType: "xml",
+				success: function(data2) {
+					$(data2).find("item").each(function () {
+						var el2 = $(this);
+						document.getElementById("dt-guilde").innerHTML = "<a href='"+$(data2).find("image").find("link").text()+"' title='Page de Guilde (Dofus-Touch.com)' target='_target' rel='noopener' style='text-decoration:none!important;color: #fff;'>"+el2.find("title").text()+"</a>";
+					});
+				}	
+			});
+		});
+	</script>
+	<div class="fixedC">
+		<div class="fixedContent fixed">
+			<div class="char-panel">
+				<div class="char-banner">
+					<div class="char-picture">
+						<div class="char-entitylook char-look"></div>    
+					</div>
+					<div class="char-ornament o-90">
+						<span id="dt-charweb">NaN</span>
+					</div>
+				</div>
+				<div class="infochar-panel">
+					<div class="infochar-main">
+						<div class="infochar-property">
+							<span class="infochar-level">
+								Niveau
+								<span id="dt-level" class="infochar-omega">
+									<span>Omega</span>
+									NaN
+								</span>
+							</span>
+						</div>
+						<span class="infochar-separation"></span>
+						<div class="infochar-property property-success">
+							<span class="success">
+								<span id="dt-success">NaN</span>
+							</span>
+						</div>
+						<span class="infochar-separation"></span>
+						<div class="infochar-property property-server">
+							<span class="server">
+								<span id="dt-guilde">NaN</span>
+							</span>
+						</div>
+						<span class="infochar-separation"></span>
+						<div class="infochar-property property-title">
+							<span class="title">
+								<span id="dt-title">NaN</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="made-by">
+		2022 &copy; <a href="https://go.kayliah.net" rel="noopener" title="Site personnel" style="text-decoration: none; color: white;">Kayliah</a> <!-- Tout droits reviennents a leur propriétaires respectifs. -->
+	</div>
+	</body>
+	</html>
